@@ -15,7 +15,13 @@ class MyApp extends StatelessWidget {
         ),
         body: Align(
           alignment: Alignment.topCenter,
-          child: ProductCard(),
+          child: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return ProductCard();
+            },
+            scrollDirection: Axis.horizontal,
+          ),
         ),
       ),
     );
